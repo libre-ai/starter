@@ -98,7 +98,7 @@ export function createTemplateHandler(
 
   // Create routes that require GET/HEAD only (for createRequestHandler)
   const routes: Record<string, (request: Request, url: URL) => Response | Promise<Response>> = {
-    "/": async (request) => {
+    "/": async (_request) => {
       return renderSsrDocument(starterDocument());
     },
 
@@ -187,7 +187,7 @@ export function createTemplateHandler(
   // Return a wrapper that handles POST/DELETE routes before delegating to createRequestHandler
   return async (request: Request): Promise<Response> => {
     const url = new URL(request.url);
-    const id = requestId();
+    const _id = requestId();
 
     // Auth-web boundary routes (handle POST/DELETE first)
     if (boundary) {
