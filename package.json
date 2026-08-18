@@ -11,7 +11,7 @@
     "fast-uri": "4.1.2"
   },
   "devDependencies": {
-    "@libre-ai/governance": "github:libre-ai/governance#4fd6e18346672189d3053e07c196c77d127e608d",
+    "@libre-ai/governance": "github:libre-ai/governance#9cd1d421d318129db99456d963f4bc1cfad67b33",
     "@biomejs/biome": "2.5.3",
     "@types/bun": "1.3.14",
     "typescript": "7.0.2"
